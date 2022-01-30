@@ -1,0 +1,37 @@
+﻿.reg-topic{
+    color : var(--primary-color);
+}
+
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    width : 300px;
+}
+
+.reg-form ::deep *, .reg-form *{
+    margin-top : 5px;
+}
+
+.reg-form input, .reg-form ::deep input, .reg-form button{
+    display: block;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    outline-width : 2px;
+}
+
+.reg-form input.invalid, .reg-form ::deep input.invalid {
+    border-color: red;
+    outline-width: 0;
+}
+
+.reg-form .reg-result{
+    text-align: center;
+}
+
+.reg-form .reg-result.success{
+    color: var(--success-color);
+}
+
+.reg-form .reg-result.error {
+    color: var(--error-color);
+}

@@ -1,0 +1,17 @@
+﻿#denied{
+    width : 100%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align : center;
+}
+
+.denied-img{
+    width : 300px;
+}
+
+.login-error{
+    color : var(--error-color);
+}

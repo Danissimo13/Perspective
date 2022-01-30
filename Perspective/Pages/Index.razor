@@ -1,0 +1,17 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Identity
+@using Perspective.Storage.Models
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<AuthorizeView>
+    <Authorized>
+     
+    </Authorized>
+    <NotAuthorized>
+
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+
+}

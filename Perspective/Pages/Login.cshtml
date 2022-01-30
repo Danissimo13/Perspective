@@ -1,0 +1,15 @@
+﻿@page
+@model Perspective.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div>
+ <form>
+     <input name="email" placeholder="Email" />
+     <span asp-validation-for="Email"></span>
+     <input name="password" placeholder="Password" />
+     <span asp-validation-for="Password"></span>
+     <input type="submit"/>
+ </form>
+</div>

@@ -1,0 +1,19 @@
+﻿<h1 class="reg-topic">Registration</h1>
+<EditForm Model="@_registrationData" OnValidSubmit="RegistrationAsync"> 
+    <div class="reg-form"> @*CSS isolation not work for EditForm*@
+        <InputText @bind-Value="@_registrationData.FirstName" placeholder="FirstName"></InputText>
+
+        <InputText @bind-Value="@_registrationData.LastName" placeholder="LastName"></InputText>
+
+        <InputText @bind-Value="@_registrationData.Email" type="email" placeholder="Email"></InputText>
+
+        <InputText @bind-Value="@_registrationData.Password" type="password" placeholder="Password"></InputText>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+        <span class="reg-result @_registrationResult.CssClass">@_registrationResult.Message</span>
+
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+    </div>
+</EditForm>

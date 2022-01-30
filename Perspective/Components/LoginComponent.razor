@@ -1,0 +1,32 @@
+﻿@using System.Web
+
+<AuthorizeView>
+    <Authorized>
+        <b>Welcome, @context.User.Identity.Name!</b>
+        <a class="ml-md-auto btn btn-primary"
+           href="/logout?returnUrl=/"
+           target="_top">Logout</a>
+    </Authorized>
+    <NotAuthorized>
+        <div class="login-component">
+            <div class="login-form">
+                <input class="login-inp"
+                       type="email"
+                       placeholder="Email"
+                       @bind="@_loginData.Email" />
+                <input class="login-inp"
+                       type="password"
+                       placeholder="Password"
+                       @bind="@_loginData.Password" />
+            </div>
+            <div class="login-buttons">
+                <a class="btn btn-primary"
+                   href="/login?email=@Encode(@_loginData.Email)&password=@Encode(@_loginData.Password)&returnUrl=@NavManager.ToBaseRelativePath(NavManager.Uri)"
+                   target="_top">Login</a>
+                <a class="btn btn-primary"
+                   href="/reg"
+                   target="_top">Registration</a>
+            </div>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>

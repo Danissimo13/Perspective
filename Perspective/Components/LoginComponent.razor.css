@@ -1,0 +1,17 @@
+﻿.login-component{
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-content : space-between;
+    width : 100%;
+}
+
+.login-buttons a{
+    margin : 0 !important;
+}
+
+.login-inp {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding-left: 5px;
+}
